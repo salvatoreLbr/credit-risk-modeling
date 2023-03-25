@@ -8,18 +8,18 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            // "program": "${file}",
+            "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": false,
             // "cwd": "${workspaceFolder}",
             // "env": {"PYTHONPATH": "${cwd}"}
             // // // // // // // // // // // // // // // // // // 
             // // // //  part for running streamlit // // // // // 
-            "program": ".venv/Scripts/streamlit.exe",  // /home/xx/tmp/venv/bin/streamlit",
-            "args": [
-                "run",
-                "src/credit_risk_modeling/Home.py"
-            ]
+            // "program": ".venv/Scripts/streamlit.exe",  // /home/xx/tmp/venv/bin/streamlit",
+            // "args": [
+            //     "run",
+            //     "src/credit_risk_modeling/Home.py"
+            // ]
         }
     ]
 }
