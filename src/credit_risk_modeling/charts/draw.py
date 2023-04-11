@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
 import streamlit as st
 from typing import Dict, Optional
 
@@ -35,6 +36,20 @@ def draw_vertical_line(
     label: Optional[str] = "",
     linestyle: Optional[str] = "solid",
 ):
+    """Function for adding a vertical line to a chart.
+
+    Args:
+        ax (plt): _description_
+        x (float): _description_
+        ymin (Optional[float], optional): _description_. Defaults to 0.
+        ymax (Optional[float], optional): _description_. Defaults to 1.
+        color (Optional[str], optional): _description_. Defaults to "r".
+        label (Optional[str], optional): _description_. Defaults to "".
+        linestyle (Optional[str], optional): _description_. Defaults to "solid".
+
+    Returns:
+        _type_: _description_
+    """
     ax.axvline(x=x, ymin=ymin, ymax=ymax, color=color, label=label, linestyle=linestyle)
 
     return ax
@@ -102,5 +117,5 @@ def get_cumulative_distribution_function_chart(
     ax.legend()
     if plot_chart_streamlit:
         st.pyplot(fig)
-    else:
+    elif plot_chart:
         fig.show()
